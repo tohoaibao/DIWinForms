@@ -5,8 +5,8 @@ using System.Text;
 
 namespace DIWinForms.Repositories
 {
-    public interface IUsersRepository
+    public interface IUsersRepository : IBaseRepository<User>
     {
-        List<User> GetAll();
+        //List<User> GetAll();
     }
 }

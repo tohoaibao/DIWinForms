@@ -8,6 +8,7 @@ namespace DIWinForms.Services
     public interface IUserService
     {
         public List<UserDto> GetAll();
-
+        public void CreateOrUpdate(UserDto user);
+        public void Delete(int Id);
     }
 }

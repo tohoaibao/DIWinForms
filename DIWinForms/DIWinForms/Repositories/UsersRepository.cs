@@ -8,20 +8,11 @@ using System.Text;
 
 namespace DIWinForms.Repositories
 {
-    public class UsersRepository : IUsersRepository
+    public class UsersRepository : BaseRepository<User>, IUsersRepository
     {
-        private readonly AppDbContext _db;
 
-        public UsersRepository(AppDbContext db)
+        public UsersRepository(AppDbContext db) : base(db)
         {
-            _db = db;
-        }
-
-        public List<User> GetAll()
-        {
-            return _db.Users
-                .AsNoTracking()
-                .ToList();
         }
     }
 }
